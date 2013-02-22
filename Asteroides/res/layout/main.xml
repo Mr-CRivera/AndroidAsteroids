@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dip"
+    tools:context=".Asteroides" >
+
+    <TextView
+        style="@style/TituloCentrado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/tituloAplicacion" />
+
+    <Button
+        android:id="@+id/buttonArrancar"
+        style="@style/BotonTextoCentrado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Arrancar" />
+
+    <Button
+        android:id="@+id/buttonConfigurar"
+        style="@style/BotonTextoCentrado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Configurar" />
+
+    <Button
+        android:id="@+id/buttonAcercaDe"
+        style="@style/BotonTextoCentrado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Acercade" />
+
+    <Button
+        android:id="@+id/buttonSalir"
+        style="@style/BotonTextoCentrado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Salir" />
+
+    <Button
+        android:id="@+id/buttonHolamundo"
+        style="@style/BotonTextoCentrado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Holamundo" />
+
+</LinearLayout>

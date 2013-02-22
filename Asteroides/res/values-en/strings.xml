@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Asteroids</string>
+    <string name="menu_settings">Settings</string>
+    <string name="Arrancar">Play</string>
+    <string name="Configurar">Configure</string>
+    <string name="Acercade">About</string>
+    <string name="AcercadeTexto">This application has been developed as a code example in the Android course.</string>
+    <string name="Salir">Exit</string>
+    <string name="tituloAplicacion">Asteroids</string>
+    <string name="ToastHolaMundo">Hello World!! ..by CRivera</string>
+    <string name="Holamundo">Hello World</string>
+
+</resources>
