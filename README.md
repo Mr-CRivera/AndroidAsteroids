@@ -1,4 +1,4 @@
 AndroidAsteroids
 ================
 
-Asteroids game developed as learning code in Android
+Asteroids game developed in order to learn coding in Android
