@@ -7,6 +7,7 @@ import com.example.asteroides.AcercaDe;
 import com.example.asteroides.Asteroides;
 import com.example.asteroides.AsteroidesHolamundo;
 import com.example.asteroides.Preferencias;
+import com.example.asteroides.Puntuaciones;
 
 public class AsteroidesService{
 
@@ -40,6 +41,16 @@ public class AsteroidesService{
 	public static void LanzarPreferencias(View view, Asteroides activity) {
 		activity.startActivity(new Intent(activity, Preferencias.class));
 	}
+	
+	//===================================================
+		/**
+		 * Lanza la actividad Puntuaciones
+		 * 
+		 * @param view
+		 */
+		public static void LanzarPuntuaciones(View view, Asteroides activity) {
+			activity.startActivity(new Intent(activity, Puntuaciones.class));
+		}
 	
 	// ===================================================
 	/**

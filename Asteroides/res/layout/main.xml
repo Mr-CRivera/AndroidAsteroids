@@ -39,6 +39,14 @@
         android:text="@string/Acercade" />
 
     <Button
+        android:id="@+id/buttonPuntuaciones"
+        style="@style/BotonTextoCentrado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Puntuaciones" />
+    
+    <Button
         android:id="@+id/buttonSalir"
         style="@style/BotonTextoCentrado"
         android:layout_width="fill_parent"

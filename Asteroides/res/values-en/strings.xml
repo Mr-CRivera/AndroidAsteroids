@@ -7,6 +7,8 @@
     <string name="Configurar">Configure</string>
     <string name="Acercade">About</string>
     <string name="AcercadeTexto">This application has been developed as a code example in the Android course.</string>
+    <string name="Puntuaciones">Top players</string>
+    <string name="Puntuaciones_vacio">No players</string>
     <string name="Salir">Exit</string>
     <string name="ToastHolaMundo">Hello World!! ..by CRivera</string>
     <string name="Holamundo">Hello World</string>
@@ -16,5 +18,7 @@
     <string name="config_config_graficos_tipo">Grafic mode</string>
     <string name="config_fragmentos">Choose number of fragments</string>
     <string name="config_fragmentos_numero">Number of fragments</string>
+    <string name="puntuaciones_icono">Application icon</string>
+    <string name="puntuaciones_subtitulo_temporal">Texto temporal del subtítulo</string>
 
 </resources>

@@ -19,30 +19,39 @@ public final class R {
         public static final int text_9dp=0x7f060000;
     }
     public static final class drawable {
-        public static final int boton_con_foco=0x7f020000;
-        public static final int boton_normal=0x7f020001;
-        public static final int boton_pulsado=0x7f020002;
-        public static final int botonholamundo=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
+        public static final int asteroide=0x7f020000;
+        public static final int asteroide2=0x7f020001;
+        public static final int boton_con_foco=0x7f020002;
+        public static final int boton_normal=0x7f020003;
+        public static final int boton_pulsado=0x7f020004;
+        public static final int botonholamundo=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
     }
     public static final class id {
-        public static final int LinearLayout2=0x7f0a0007;
-        public static final int buttonAcercaDe=0x7f0a0004;
-        public static final int buttonArrancar=0x7f0a0002;
-        public static final int buttonConfigurar=0x7f0a0003;
-        public static final int buttonHolamundo=0x7f0a0006;
-        public static final int buttonPantallaHolamundo=0x7f0a0001;
-        public static final int buttonSalir=0x7f0a0005;
-        public static final int menu_acerca_de=0x7f0a000b;
-        public static final int menu_settings=0x7f0a000a;
-        public static final int tableRow1=0x7f0a0008;
-        public static final int tableRow2=0x7f0a0009;
+        public static final int LinearLayout2=0x7f0a000b;
+        public static final int buttonAcercaDe=0x7f0a0007;
+        public static final int buttonArrancar=0x7f0a0005;
+        public static final int buttonConfigurar=0x7f0a0006;
+        public static final int buttonHolamundo=0x7f0a000a;
+        public static final int buttonPantallaHolamundo=0x7f0a0004;
+        public static final int buttonPuntuaciones=0x7f0a0008;
+        public static final int buttonSalir=0x7f0a0009;
+        public static final int icono=0x7f0a0001;
+        public static final int menu_acerca_de=0x7f0a0010;
+        public static final int menu_settings=0x7f0a000f;
+        public static final int subtitulo=0x7f0a0003;
+        public static final int tableRow1=0x7f0a000c;
+        public static final int tableRow2=0x7f0a000d;
+        public static final int tableRow3=0x7f0a000e;
         public static final int textViewAcercaDe=0x7f0a0000;
+        public static final int titulo=0x7f0a0002;
     }
     public static final class layout {
         public static final int acercade=0x7f030000;
-        public static final int holamundo=0x7f030001;
-        public static final int main=0x7f030002;
+        public static final int elemento_lista=0x7f030001;
+        public static final int holamundo=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int puntuaciones=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -52,17 +61,21 @@ public final class R {
         public static final int AcercadeTexto=0x7f070005;
         public static final int Arrancar=0x7f070002;
         public static final int Configurar=0x7f070003;
-        public static final int Holamundo=0x7f070008;
-        public static final int Salir=0x7f070006;
-        public static final int ToastHolaMundo=0x7f070007;
+        public static final int Holamundo=0x7f07000a;
+        public static final int Puntuaciones=0x7f070006;
+        public static final int Puntuaciones_vacio=0x7f070007;
+        public static final int Salir=0x7f070008;
+        public static final int ToastHolaMundo=0x7f070009;
         public static final int app_name=0x7f070000;
-        public static final int config_config_graficos=0x7f07000b;
-        public static final int config_config_graficos_tipo=0x7f07000c;
-        public static final int config_fragmentos=0x7f07000d;
-        public static final int config_fragmentos_numero=0x7f07000e;
-        public static final int config_musica=0x7f070009;
-        public static final int config_musica_reproducir=0x7f07000a;
+        public static final int config_config_graficos=0x7f07000d;
+        public static final int config_config_graficos_tipo=0x7f07000e;
+        public static final int config_fragmentos=0x7f07000f;
+        public static final int config_fragmentos_numero=0x7f070010;
+        public static final int config_musica=0x7f07000b;
+        public static final int config_musica_reproducir=0x7f07000c;
         public static final int menu_settings=0x7f070001;
+        public static final int puntuaciones_icono=0x7f070011;
+        public static final int puntuaciones_subtitulo_temporal=0x7f070012;
     }
     public static final class style {
         /** 

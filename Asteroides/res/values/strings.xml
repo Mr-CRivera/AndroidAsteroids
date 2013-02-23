@@ -7,6 +7,8 @@
     <string name="Configurar">Configurar</string>
     <string name="Acercade">Acerca de </string>
     <string name="AcercadeTexto">Este programa ha sido desarrollado como ejemplo en el curso de Android para demostrar cómo se pueden lanzar nuevas actividades desde la actividad principal.</string>
+    <string name="Puntuaciones">Puntuaciones</string>
+    <string name="Puntuaciones_vacio">No hay puntuaciones</string>
     <string name="Salir">Salir</string>
     <string name="ToastHolaMundo">Hola Mundo!! ..by CRivera</string>
     <string name="Holamundo">Hola Mundo</string>
@@ -16,5 +18,7 @@
     <string name="config_config_graficos_tipo">Tipo de gráficos</string>
     <string name="config_fragmentos">En cuantos trozos se divide un asteroide</string>
     <string name="config_fragmentos_numero">Número de Fragmentos</string>
+    <string name="puntuaciones_icono">Icono de la aplicación</string>
+    <string name="puntuaciones_subtitulo_temporal">Texto temporal del subtítulo</string>
     
 </resources>

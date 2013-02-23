@@ -9,8 +9,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.asteroides.services.AsteroidesService;
+import com.example.asteroides.util.AlmacenPuntuaciones;
+import com.example.asteroides.util.AlmacenPuntuacionesArray;
 
 public class Asteroides extends Activity implements OnClickListener {
+
+	public static AlmacenPuntuaciones almacen = new AlmacenPuntuacionesArray();
 
 	// ===================================================
 	@Override
@@ -22,6 +26,7 @@ public class Asteroides extends Activity implements OnClickListener {
 		findViewById(R.id.buttonHolamundo).setOnClickListener(this);
 		findViewById(R.id.buttonAcercaDe).setOnClickListener(this);
 		findViewById(R.id.buttonConfigurar).setOnClickListener(this);
+		findViewById(R.id.buttonPuntuaciones).setOnClickListener(this);
 	}
 
 	// ===================================================
@@ -53,8 +58,12 @@ public class Asteroides extends Activity implements OnClickListener {
 			AsteroidesService.lanzarAcercaDe(v, this);
 			break;
 		case R.id.buttonConfigurar:
-			//botón de preferencias
-			AsteroidesService.LanzarPreferencias(v,this);
+			// botón de preferencias
+			AsteroidesService.LanzarPreferencias(v, this);
+			break;
+		case R.id.buttonPuntuaciones:
+			// botón de puntuaciones
+			AsteroidesService.LanzarPuntuaciones(v, this);
 			break;
 		default:
 			// click no esperado
@@ -77,7 +86,7 @@ public class Asteroides extends Activity implements OnClickListener {
 			AsteroidesService.lanzarAcercaDe(null, this);
 			break;
 		case R.id.menu_settings:
-			AsteroidesService.LanzarPreferencias(null,this);
+			AsteroidesService.LanzarPreferencias(null, this);
 			break;
 		default:
 			// opción de menú no esperada

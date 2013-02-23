@@ -16,7 +16,7 @@
         
         
         <activity
-            android:name="com.example.asteroides.Asteroides"
+            android:name="Asteroides"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,11 +26,12 @@
         
         
         <activity
-            android:name="com.example.asteroides.AsteroidesHolamundo"
+            android:name="AsteroidesHolamundo"
             android:label="@string/Holamundo" android:theme="@android:style/Theme.Dialog">
         </activity>
         <activity android:name="AcercaDe" android:label="@string/Acercade" android:theme="@android:style/Theme.Dialog"></activity>
         <activity android:name="Preferencias" android:label="@string/Configurar"></activity>
+        <activity android:name="Puntuaciones" android:label="@string/Puntuaciones"></activity>
         
         
     </application>

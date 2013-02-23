@@ -44,15 +44,21 @@
                 style="@style/BotonTextoCentrado"
                 android:text="@string/Salir" />
         </TableRow>
+        
+        <TableRow android:id="@+id/tableRow3" >
+        
+	        <Button
+	        	android:id="@+id/buttonPuntuaciones"
+	        	style="@style/BotonTextoCentrado"
+		        android:text="@string/Puntuaciones" />
+	        
+	        <Button
+		        android:id="@+id/buttonHolamundo"
+	    	    style="@style/BotonTextoCentrado"
+		        android:text="@string/Holamundo" />
+	        
+        </TableRow>
+        
     </TableLayout>
-
-    <Button
-        android:id="@+id/buttonHolamundo"
-        style="@style/BotonTextoCentrado"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dip"
-        android:text="@string/Holamundo" />
 
 </LinearLayout>
