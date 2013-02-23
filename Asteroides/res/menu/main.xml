@@ -2,8 +2,14 @@
 
     <item
         android:id="@+id/menu_settings"
-        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_preferences"
         android:showAsAction="never"
         android:title="@string/menu_settings"/>
+    <item
+        android:id="@+id/menu_acerca_de"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:showAsAction="never"
+        android:title="@string/Acercade">
+    </item>
 
 </menu>

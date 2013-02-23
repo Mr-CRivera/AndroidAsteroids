@@ -29,6 +29,7 @@ public final class R {
         public static final int buttonHolamundo=0x7f080006;
         public static final int buttonPantallaHolamundo=0x7f080001;
         public static final int buttonSalir=0x7f080005;
+        public static final int menu_acerca_de=0x7f08000b;
         public static final int menu_settings=0x7f08000a;
         public static final int tableRow1=0x7f080008;
         public static final int tableRow2=0x7f080009;
@@ -47,12 +48,11 @@ public final class R {
         public static final int AcercadeTexto=0x7f050005;
         public static final int Arrancar=0x7f050002;
         public static final int Configurar=0x7f050003;
-        public static final int Holamundo=0x7f050009;
+        public static final int Holamundo=0x7f050008;
         public static final int Salir=0x7f050006;
-        public static final int ToastHolaMundo=0x7f050008;
+        public static final int ToastHolaMundo=0x7f050007;
         public static final int app_name=0x7f050000;
         public static final int menu_settings=0x7f050001;
-        public static final int tituloAplicacion=0x7f050007;
     }
     public static final class style {
         /** 

@@ -8,7 +8,6 @@
     <string name="Acercade">Acerca de </string>
     <string name="AcercadeTexto">Este programa ha sido desarrollado como ejemplo en el curso de Android para demostrar cómo se pueden lanzar nuevas actividades desde la actividad principal.</string>
     <string name="Salir">Salir</string>
-    <string name="tituloAplicacion">Asteroides</string>
     <string name="ToastHolaMundo">Hola Mundo!! ..by CRivera</string>
     <string name="Holamundo">Hola Mundo</string>
 

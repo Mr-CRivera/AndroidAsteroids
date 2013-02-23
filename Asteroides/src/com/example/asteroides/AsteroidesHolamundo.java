@@ -5,50 +5,39 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.Toast;
+
+import com.example.asteroides.services.AsteroidesHolamundoService;
 
 public class AsteroidesHolamundo extends Activity implements OnClickListener {
-
-	private Button bHolamundo;
 
 	// ===================================================
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.holamundo);
-		bHolamundo = (Button) findViewById(R.id.buttonPantallaHolamundo);
-		bHolamundo.setOnClickListener(this);
+		// establezco los listener de los botones
+		findViewById(R.id.buttonPantallaHolamundo).setOnClickListener(this);
 	}
 
 	// ===================================================
 	/**
-	 * Evento on click que ejecutará la tarea del botón 
-	 * Holamundo
+	 * Evento on click que llamará a las tareas correspondientes de la clase de
+	 * servicio Holamundo
 	 */
 	@Override
 	public void onClick(View v) {
-		if (v == null || bHolamundo == null) {
-			Log.e(this.getClass().getName(),
-					"Uno de los parámetros del evento OnClick es null");
-		} else if (v.getId() == bHolamundo.getId()) {
-			this.holamundoToast(v);
-		} else {
+		switch (v.getId()) {
+		case R.id.buttonPantallaHolamundo:
+			// pulsado botón holamundo
+			AsteroidesHolamundoService.holamundoToast(v, this);
+			break;
+		default:
+			// click no esperado
 			Log.w(this.getClass().getName(),
 					"Lanzado evento onClick no esperado en " + v.getId());
+			break;
 		}
 
-	}
-
-	// ===================================================
-	/**
-	 * Muestra un Toast con un Holamundo en pantalla
-	 * 
-	 * @param view
-	 */
-	private void holamundoToast(View view) {
-		Toast.makeText(this, R.string.ToastHolaMundo, Toast.LENGTH_SHORT)
-				.show();
 	}
 
 	// ===================================================
