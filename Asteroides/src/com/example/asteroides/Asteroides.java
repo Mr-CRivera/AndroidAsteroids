@@ -39,7 +39,8 @@ public class Asteroides extends Activity implements OnClickListener {
 
 	// ===================================================
 	/**
-	 * Evento on click
+	 * Evento on click que ejecutará la tarea correspondiente
+	 * en función del botón pulsado
 	 */
 	@Override
 	public void onClick(View v) {
