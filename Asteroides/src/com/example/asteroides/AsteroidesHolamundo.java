@@ -23,8 +23,7 @@ public class AsteroidesHolamundo extends Activity implements OnClickListener {
 
 	// ===================================================
 	/**
-	 * Evento on click que ejecutará la tarea del botón
-	 * Holamundo
+	 * Evento on click que ejecutará la tarea del botón Holamundo
 	 */
 	@Override
 	public void onClick(View v) {
