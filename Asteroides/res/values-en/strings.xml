@@ -10,5 +10,11 @@
     <string name="Salir">Exit</string>
     <string name="ToastHolaMundo">Hello World!! ..by CRivera</string>
     <string name="Holamundo">Hello World</string>
+    <string name="config_musica">Enable background music</string>
+    <string name="config_musica_reproducir">Background music</string>
+    <string name="config_config_graficos">Choose grafic mode</string>
+    <string name="config_config_graficos_tipo">Grafic mode</string>
+    <string name="config_fragmentos">Choose number of fragments</string>
+    <string name="config_fragmentos_numero">Number of fragments</string>
 
 </resources>

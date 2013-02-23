@@ -10,5 +10,11 @@
     <string name="Salir">Salir</string>
     <string name="ToastHolaMundo">Hola Mundo!! ..by CRivera</string>
     <string name="Holamundo">Hola Mundo</string>
-
+    <string name="config_musica">Se reproduce música de fondo</string>
+    <string name="config_musica_reproducir">Reproducir música</string>
+    <string name="config_config_graficos">Se escoge la representación de gráficos</string>
+    <string name="config_config_graficos_tipo">Tipo de gráficos</string>
+    <string name="config_fragmentos">En cuantos trozos se divide un asteroide</string>
+    <string name="config_fragmentos_numero">Número de Fragmentos</string>
+    
 </resources>

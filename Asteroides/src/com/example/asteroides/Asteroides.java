@@ -21,6 +21,7 @@ public class Asteroides extends Activity implements OnClickListener {
 		findViewById(R.id.buttonSalir).setOnClickListener(this);
 		findViewById(R.id.buttonHolamundo).setOnClickListener(this);
 		findViewById(R.id.buttonAcercaDe).setOnClickListener(this);
+		findViewById(R.id.buttonConfigurar).setOnClickListener(this);
 	}
 
 	// ===================================================
@@ -51,6 +52,10 @@ public class Asteroides extends Activity implements OnClickListener {
 			// botón acerca de
 			AsteroidesService.lanzarAcercaDe(v, this);
 			break;
+		case R.id.buttonConfigurar:
+			//botón de preferencias
+			AsteroidesService.LanzarPreferencias(v,this);
+			break;
 		default:
 			// click no esperado
 			Log.w(this.getClass().getName(),
@@ -70,6 +75,9 @@ public class Asteroides extends Activity implements OnClickListener {
 		case R.id.menu_acerca_de:
 			// opción de menú acerca de
 			AsteroidesService.lanzarAcercaDe(null, this);
+			break;
+		case R.id.menu_settings:
+			AsteroidesService.LanzarPreferencias(null,this);
 			break;
 		default:
 			// opción de menú no esperada

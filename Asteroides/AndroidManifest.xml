@@ -30,6 +30,7 @@
             android:label="@string/Holamundo" android:theme="@android:style/Theme.Dialog">
         </activity>
         <activity android:name="AcercaDe" android:label="@string/Acercade" android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name="Preferencias" android:label="@string/Configurar"></activity>
         
         
     </application>
