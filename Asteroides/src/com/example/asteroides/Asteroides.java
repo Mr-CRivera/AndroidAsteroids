@@ -27,6 +27,7 @@ public class Asteroides extends Activity implements OnClickListener {
 		findViewById(R.id.buttonAcercaDe).setOnClickListener(this);
 		findViewById(R.id.buttonConfigurar).setOnClickListener(this);
 		findViewById(R.id.buttonPuntuaciones).setOnClickListener(this);
+		findViewById(R.id.buttonArrancar).setOnClickListener(this);
 	}
 
 	// ===================================================
@@ -64,6 +65,10 @@ public class Asteroides extends Activity implements OnClickListener {
 		case R.id.buttonPuntuaciones:
 			// botón de puntuaciones
 			AsteroidesService.LanzarPuntuaciones(v, this);
+			break;
+		case R.id.buttonArrancar:
+			// botón de jugar
+			AsteroidesService.LanzarJuego(v, this);
 			break;
 		default:
 			// click no esperado

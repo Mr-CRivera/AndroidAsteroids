@@ -32,6 +32,7 @@
         <activity android:name="AcercaDe" android:label="@string/Acercade" android:theme="@android:style/Theme.Dialog"></activity>
         <activity android:name="Preferencias" android:label="@string/Configurar"></activity>
         <activity android:name="Puntuaciones" android:label="@string/Puntuaciones"></activity>
+        <activity android:name="Juego" android:label="@string/Arrancar" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="landscape"></activity>
         
         
     </application>

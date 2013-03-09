@@ -6,6 +6,7 @@ import android.view.View;
 import com.example.asteroides.AcercaDe;
 import com.example.asteroides.Asteroides;
 import com.example.asteroides.AsteroidesHolamundo;
+import com.example.asteroides.Juego;
 import com.example.asteroides.Preferencias;
 import com.example.asteroides.Puntuaciones;
 
@@ -43,15 +44,24 @@ public class AsteroidesService{
 	}
 	
 	//===================================================
-		/**
-		 * Lanza la actividad Puntuaciones
-		 * 
-		 * @param view
-		 */
-		public static void LanzarPuntuaciones(View view, Asteroides activity) {
-			activity.startActivity(new Intent(activity, Puntuaciones.class));
-		}
+	/**
+	 * Lanza la actividad Puntuaciones
+	 * 
+	 * @param view
+	 */
+	public static void LanzarPuntuaciones(View view, Asteroides activity) {
+		activity.startActivity(new Intent(activity, Puntuaciones.class));
+	}
 	
+	// ===================================================
+	/**
+	 * Lanza el juego
+	 * 
+	 * @param view
+	 */
+	public static void LanzarJuego(View view, Asteroides activity) {
+		activity.startActivity(new Intent(activity, Juego.class));
+	}
 	// ===================================================
 	/**
 	 * Finaliza la aplicación
