@@ -16,7 +16,7 @@ public class Grafico {
      private int ancho, alto;     //Dimensiones de la imagen
      private int radioColision;   //Para determinar colisión
 
-     public static final int MAX_VELOCIDAD = 20; // Para determinar el espacio a borrar (view.ivalidate)
+     public static final int MAX_VELOCIDAD = 8; // Para determinar el espacio a borrar (view.ivalidate)
     
      // ===================================================
      public Grafico(View view, Drawable drawable){
