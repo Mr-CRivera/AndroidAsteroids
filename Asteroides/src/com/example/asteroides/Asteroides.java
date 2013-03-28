@@ -46,7 +46,8 @@ public class Asteroides extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if (mp!=null) { mp.start();}
+		if (mp==null) { mp = MediaPlayer.create(this, R.raw.galaxias); }
+		mp.start();
 	}
 
 	// ===================================================
@@ -63,7 +64,32 @@ public class Asteroides extends Activity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true; // consumimos el item, no se propaga
 	}
+	
+	// ===================================================
+	
+	@Override
+	protected void onSaveInstanceState(Bundle estadoGuardado) {
+		super.onSaveInstanceState(estadoGuardado);
+		if (mp != null) {
+			int pos = mp.getCurrentPosition();
+			estadoGuardado.putInt("posicion", pos);
+		}
+		// Toast.makeText(this, "onSaveInstanceState",
+		// Toast.LENGTH_SHORT).show();
+	}
 
+	// ===================================================
+	@Override
+	protected void onRestoreInstanceState(Bundle estadoGuardado) {
+		super.onRestoreInstanceState(estadoGuardado);
+        if (estadoGuardado != null && mp != null) {
+               int pos = estadoGuardado.getInt("posicion");
+               mp.seekTo(pos);
+        }
+		// Toast.makeText(this, "onRestoreInstanceState",
+		// Toast.LENGTH_SHORT).show();
+	}
+	
 	// ===================================================
 	/**
 	 * Evento on click que ejecutará la tarea correspondiente en función del

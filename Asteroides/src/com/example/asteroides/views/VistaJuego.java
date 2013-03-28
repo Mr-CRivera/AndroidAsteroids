@@ -1,13 +1,7 @@
 package com.example.asteroides.views;
 
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Canvas;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,10 +11,11 @@ import com.example.asteroides.util.Misil;
 import com.example.asteroides.util.Nave;
 import com.example.asteroides.util.VAsteroides;
 
-public class VistaJuego extends View implements SensorEventListener{
+//public class VistaJuego extends View implements SensorEventListener{
+public class VistaJuego extends View {
 
 	// nave
-	private Nave nave;
+	public Nave nave;
 
 	// variables para asteroides
 	private VAsteroides vAsteroides; // los Asteroides
@@ -39,13 +34,6 @@ public class VistaJuego extends View implements SensorEventListener{
 	private static final int FACTOR_ACELERACION = 6;
 	private static final double FACTOR_GIRO = 1.5;
 	private boolean disparo = false;
-
-	// valores utilizados en el sensor de posición
-	private boolean hayValorInicial = false;
-	private float valorInicialX;
-	private float valorInicialY;
-	private static final int FACTOR_ACELERACION_SENSOR = 2;
-	private static final double FACTOR_GIRO_SENSOR = 0.7;
 
 	// hilo que se ocupará de actualizar las posiciones de los gráficos de la
 	// vista Thread encargado de procesar el juego
@@ -74,18 +62,6 @@ public class VistaJuego extends View implements SensorEventListener{
 
 		super(context, attrs);
 
-		// establezco el sensor de orientación que se utilizará
-		SensorManager mSensorManager = (SensorManager) context
-				.getSystemService(Context.SENSOR_SERVICE);
-		List<Sensor> listSensors = mSensorManager
-				.getSensorList(Sensor.TYPE_ACCELEROMETER);
-		// .getSensorList(Sensor.TYPE_ORIENTATION);
-		if (!listSensors.isEmpty()) {
-			Sensor orientationSensor = listSensors.get(0);
-			mSensorManager.registerListener(this, orientationSensor,
-					SensorManager.SENSOR_DELAY_GAME);
-		}
-
 		// crea los asteroides
 		vAsteroides = new VAsteroides(this, context.getResources().getDrawable(
 				R.drawable.asteroide1), numAsteroides);
@@ -95,46 +71,8 @@ public class VistaJuego extends View implements SensorEventListener{
 				R.drawable.nave));
 
 		// crea el misil
-		ms = new Misil(this,  context.getResources().getDrawable(
+		ms = new Misil(this, context.getResources().getDrawable(
 				R.drawable.misil1));
-
-	}
-	
-	// ===================================================
-	// no utilizo este método porque el sensor tendrá siempre la misma precisión
-	@Override
-	public void onAccuracyChanged(Sensor sensor, int accuracy) {
-	}
-
-	// ===================================================
-	// método que gestiona las lecturas del sensor para el giro
-	@Override
-	public void onSensorChanged(SensorEvent event) {
-		float valorX = event.values[0];
-		float valorY = event.values[1];
-		if (!hayValorInicial) {
-			valorInicialX = valorX;
-			valorInicialY = valorY;
-			hayValorInicial = true;
-		}
-
-		float diferenciaX = valorInicialX - valorX;
-		float diferenciaY = valorY - valorInicialY;
-
-		// desprecio movimientos demasiado pequeños en aceleración (X)
-		if ((-1 < diferenciaX) && (diferenciaX < 1)) {
-			diferenciaX = 0;
-		}
-
-		nave.setGiroNave((diferenciaY) / FACTOR_GIRO_SENSOR);
-		nave.setAceleracionNave(((diferenciaX) / FACTOR_ACELERACION_SENSOR));
-
-		// descarto lecturas erroneas del sensor
-		if ((event.values[0] == event.values[1])
-				&& (event.values[0] == event.values[2])) {
-			nave.setGiroNave(0);
-			nave.setAceleracionNave(0);
-		}
 
 	}
 
