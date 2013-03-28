@@ -53,7 +53,7 @@ public class VistaJuego extends View implements SensorEventListener {
 	// vista Thread encargado de procesar el juego
 	private ThreadJuego thread = new ThreadJuego();
 	// Cada cuanto queremos procesar cambios (ms)
-	private static int PERIODO_PROCESO = 15;
+	private static int PERIODO_PROCESO = 50;
 	// Timestamp indicando cuando se realizó el último proceso
 	private long ultimoProceso = 0;
 
@@ -62,7 +62,7 @@ public class VistaJuego extends View implements SensorEventListener {
 	private float valorInicialX;
 	private float valorInicialY;
 	private static final int FACTOR_ACELERACION_SENSOR = 2;
-	private static final double FACTOR_GIRO_SENSOR = 1;
+	private static final double FACTOR_GIRO_SENSOR = 0.7;
 
 	// ===================================================
 	// ===================================================
@@ -72,12 +72,6 @@ public class VistaJuego extends View implements SensorEventListener {
 		@Override
 		public void run() {
 			while (true) {
-				// try{
-				// sleep(PERIODO_PROCESO/2);
-				// }
-				// catch (InterruptedException e){
-				// Log.e(getName(), "Se ha producido una excepción", e);
-				// }
 				actualizaFisica();
 			}
 		}
@@ -136,16 +130,32 @@ public class VistaJuego extends View implements SensorEventListener {
 	// método que gestiona las lecturas del sensor para el giro
 	@Override
 	public void onSensorChanged(SensorEvent event) {
-		float valorY = event.values[1];
 		float valorX = event.values[0];
+		float valorY = event.values[1];
 		if (!hayValorInicial) {
 			valorInicialX = valorX;
 			valorInicialY = valorY;
 			hayValorInicial = true;
 		}
-		giroNave = (valorY - valorInicialY) / FACTOR_GIRO_SENSOR;
-		aceleracionNave = (float) (valorX - valorInicialX)
-				/ FACTOR_ACELERACION_SENSOR;
+		
+		float diferenciaX = valorInicialX - valorX;
+		float diferenciaY = valorY - valorInicialY;
+		
+		// desprecio movimientos demasiado pequeños en aceleración (X)
+		if ((-1 < diferenciaX) && (diferenciaX < 1)) {
+			diferenciaX = 0;
+		}
+
+		giroNave = (diferenciaY) / FACTOR_GIRO_SENSOR;
+		aceleracionNave = (float) ((diferenciaX) / FACTOR_ACELERACION_SENSOR);
+
+		// descarto lecturas erroneas del sensor
+		if ((event.values[0] == event.values[1])
+				&& (event.values[0] == event.values[2])) {
+			giroNave = 0;
+			aceleracionNave = 0;
+		}
+
 	}
 
 	// ===================================================
@@ -191,8 +201,8 @@ public class VistaJuego extends View implements SensorEventListener {
 
 		// dibuja la nave
 		this.nave.dibujaGrafico(canvas);
-		
-		//dibuja un misil si está activo
+
+		// dibuja un misil si está activo
 		if (misilActivo) {
 			this.misil.dibujaGrafico(canvas);
 		}
