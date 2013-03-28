@@ -9,14 +9,14 @@ package com.example.asteroides;
 
 public final class R {
     public static final class array {
-        public static final int tiposGraficos=0x7f050000;
-        public static final int tiposGraficosValores=0x7f050001;
+        public static final int tiposGraficos=0x7f060000;
+        public static final int tiposGraficosValores=0x7f060001;
     }
     public static final class attr {
     }
     public static final class dimen {
-        public static final int text_25sp=0x7f060001;
-        public static final int text_9dp=0x7f060000;
+        public static final int text_25sp=0x7f070001;
+        public static final int text_9dp=0x7f070000;
     }
     public static final class drawable {
         public static final int asteroide=0x7f020000;
@@ -36,24 +36,24 @@ public final class R {
         public static final int nave_fuego=0x7f02000e;
     }
     public static final class id {
-        public static final int LinearLayout2=0x7f0a000c;
-        public static final int buttonAcercaDe=0x7f0a0008;
-        public static final int buttonArrancar=0x7f0a0006;
-        public static final int buttonConfigurar=0x7f0a0007;
-        public static final int buttonHolamundo=0x7f0a000b;
-        public static final int buttonPantallaHolamundo=0x7f0a0004;
-        public static final int buttonPuntuaciones=0x7f0a0009;
-        public static final int buttonSalir=0x7f0a000a;
-        public static final int icono=0x7f0a0001;
-        public static final int menu_acerca_de=0x7f0a0011;
-        public static final int menu_settings=0x7f0a0010;
-        public static final int subtitulo=0x7f0a0003;
-        public static final int tableRow1=0x7f0a000d;
-        public static final int tableRow2=0x7f0a000e;
-        public static final int tableRow3=0x7f0a000f;
-        public static final int textViewAcercaDe=0x7f0a0000;
-        public static final int titulo=0x7f0a0002;
-        public static final int vistaJuego=0x7f0a0005;
+        public static final int LinearLayout2=0x7f0b000c;
+        public static final int buttonAcercaDe=0x7f0b0008;
+        public static final int buttonArrancar=0x7f0b0006;
+        public static final int buttonConfigurar=0x7f0b0007;
+        public static final int buttonHolamundo=0x7f0b000b;
+        public static final int buttonPantallaHolamundo=0x7f0b0004;
+        public static final int buttonPuntuaciones=0x7f0b0009;
+        public static final int buttonSalir=0x7f0b000a;
+        public static final int icono=0x7f0b0001;
+        public static final int menu_acerca_de=0x7f0b0011;
+        public static final int menu_settings=0x7f0b0010;
+        public static final int subtitulo=0x7f0b0003;
+        public static final int tableRow1=0x7f0b000d;
+        public static final int tableRow2=0x7f0b000e;
+        public static final int tableRow3=0x7f0b000f;
+        public static final int textViewAcercaDe=0x7f0b0000;
+        public static final int titulo=0x7f0b0002;
+        public static final int vistaJuego=0x7f0b0005;
     }
     public static final class layout {
         public static final int acercade=0x7f030000;
@@ -64,28 +64,31 @@ public final class R {
         public static final int puntuaciones=0x7f030005;
     }
     public static final class menu {
-        public static final int main=0x7f090000;
+        public static final int main=0x7f0a0000;
+    }
+    public static final class raw {
+        public static final int galaxias=0x7f050000;
     }
     public static final class string {
-        public static final int Acercade=0x7f070004;
-        public static final int AcercadeTexto=0x7f070005;
-        public static final int Arrancar=0x7f070002;
-        public static final int Configurar=0x7f070003;
-        public static final int Holamundo=0x7f07000a;
-        public static final int Puntuaciones=0x7f070006;
-        public static final int Puntuaciones_vacio=0x7f070007;
-        public static final int Salir=0x7f070008;
-        public static final int ToastHolaMundo=0x7f070009;
-        public static final int app_name=0x7f070000;
-        public static final int config_config_graficos=0x7f07000d;
-        public static final int config_config_graficos_tipo=0x7f07000e;
-        public static final int config_fragmentos=0x7f07000f;
-        public static final int config_fragmentos_numero=0x7f070010;
-        public static final int config_musica=0x7f07000b;
-        public static final int config_musica_reproducir=0x7f07000c;
-        public static final int menu_settings=0x7f070001;
-        public static final int puntuaciones_icono=0x7f070011;
-        public static final int puntuaciones_subtitulo_temporal=0x7f070012;
+        public static final int Acercade=0x7f080004;
+        public static final int AcercadeTexto=0x7f080005;
+        public static final int Arrancar=0x7f080002;
+        public static final int Configurar=0x7f080003;
+        public static final int Holamundo=0x7f08000a;
+        public static final int Puntuaciones=0x7f080006;
+        public static final int Puntuaciones_vacio=0x7f080007;
+        public static final int Salir=0x7f080008;
+        public static final int ToastHolaMundo=0x7f080009;
+        public static final int app_name=0x7f080000;
+        public static final int config_config_graficos=0x7f08000d;
+        public static final int config_config_graficos_tipo=0x7f08000e;
+        public static final int config_fragmentos=0x7f08000f;
+        public static final int config_fragmentos_numero=0x7f080010;
+        public static final int config_musica=0x7f08000b;
+        public static final int config_musica_reproducir=0x7f08000c;
+        public static final int menu_settings=0x7f080001;
+        public static final int puntuaciones_icono=0x7f080011;
+        public static final int puntuaciones_subtitulo_temporal=0x7f080012;
     }
     public static final class style {
         /** 
@@ -98,16 +101,16 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
-        public static final int BotonTextoCentrado=0x7f080004;
+        public static final int AppTheme=0x7f090001;
+        public static final int BotonTextoCentrado=0x7f090004;
         /**  Estilos y Temas creados para la aplicacion Asteroides por CRivera 
          */
-        public static final int TemaAsteroides=0x7f080002;
-        public static final int TituloCentrado=0x7f080003;
+        public static final int TemaAsteroides=0x7f090002;
+        public static final int TituloCentrado=0x7f090003;
     }
     public static final class xml {
         public static final int preferencias=0x7f040000;

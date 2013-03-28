@@ -1,6 +1,7 @@
 package com.example.asteroides;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -15,6 +16,7 @@ import com.example.asteroides.util.AlmacenPuntuacionesArray;
 public class Asteroides extends Activity implements OnClickListener {
 
 	public static AlmacenPuntuaciones almacen = new AlmacenPuntuacionesArray();
+	private MediaPlayer mp = null;
 
 	// ===================================================
 	@Override
@@ -28,6 +30,30 @@ public class Asteroides extends Activity implements OnClickListener {
 		findViewById(R.id.buttonConfigurar).setOnClickListener(this);
 		findViewById(R.id.buttonPuntuaciones).setOnClickListener(this);
 		findViewById(R.id.buttonArrancar).setOnClickListener(this);
+		// reproduzco la música de fondo
+		mp = MediaPlayer.create(this, R.raw.galaxias);
+		mp.start();
+	}
+
+	// ===================================================
+//	@Override
+//	protected void onPause() {
+//		super.onPause();
+//		if (mp!=null) { mp.pause();}
+//	}
+
+	// ===================================================
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if (mp!=null) { mp.start();}
+	}
+
+	// ===================================================
+	@Override
+	protected void onDestroy() {
+		if (mp!=null) { mp.stop();}
+		super.onDestroy();
 	}
 
 	// ===================================================
