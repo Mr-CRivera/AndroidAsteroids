@@ -12,11 +12,13 @@ import android.view.View.OnClickListener;
 import com.example.asteroides.services.AsteroidesService;
 import com.example.asteroides.util.AlmacenPuntuaciones;
 import com.example.asteroides.util.AlmacenPuntuacionesArray;
+import com.example.asteroides.util.HiloMusica;
 
 public class Asteroides extends Activity implements OnClickListener {
 
 	public static AlmacenPuntuaciones almacen = new AlmacenPuntuacionesArray();
-	private MediaPlayer mp = null;
+	private MediaPlayer mp;
+//	private HiloMusica hiloMusica = null;
 
 	// ===================================================
 	@Override
@@ -31,6 +33,9 @@ public class Asteroides extends Activity implements OnClickListener {
 		findViewById(R.id.buttonPuntuaciones).setOnClickListener(this);
 		findViewById(R.id.buttonArrancar).setOnClickListener(this);
 		// reproduzco la música de fondo
+		
+//		hiloMusica = new HiloMusica(this, R.raw.galaxias);
+//		hiloMusica.start();
 		mp = MediaPlayer.create(this, R.raw.galaxias);
 		mp.start();
 	}
@@ -46,6 +51,7 @@ public class Asteroides extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
+//		hiloMusica.mp_start();
 		if (mp==null) { mp = MediaPlayer.create(this, R.raw.galaxias); }
 		mp.start();
 	}
@@ -54,6 +60,7 @@ public class Asteroides extends Activity implements OnClickListener {
 	@Override
 	protected void onDestroy() {
 		if (mp!=null) { mp.stop();}
+//		hiloMusica.mp_stop();
 		super.onDestroy();
 	}
 
